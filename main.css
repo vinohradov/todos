@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 50px;
+    border: 1px solid black;
+}
+
+.todos-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.todo-item {
+    position: relative;
+    display: flex;
+    width: 350px;
+    font-size: 20px;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.todo-item .todo-text {
+    margin-left: 30px;
+    max-width: 250px;
+}
+
+.todo-item .sign {
+    position: absolute;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid grey;
+    border-radius: 50%;
+}
+
+.todo-item .mark {;
+    position: absolute;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    transform: rotate(-10deg);
+}
+
+.todo-item .mark span {
+    display: none;
+}
+
+.todo-item.complete .todo-text {
+    text-decoration: line-through;
+}
+
+.todo-item.complete .mark span {
+    display: block;
+}
+
+.todo-item.important .sign {
+    background: red;
+}
+.todo-item.unimportant .sign {
+    background: #00ff00;
+}
+
+.todos-controls {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.todos-controls .control-item {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todos-controls .control-item button {
+    padding: 5px;
+}
+
+.remove-todos {
+    width: 100%;
+    padding: 20px;
+}
+
+.remove-todos-btn {
+    width: 300px;
+    padding: 5px;
+}
